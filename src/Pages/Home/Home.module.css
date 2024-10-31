@@ -1,0 +1,142 @@
+.container {
+    max-width: 2000px;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container .content {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 0 7.5rem 0 3rem;
+}
+
+.container .content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    display: flex;
+    gap: .5rem;
+    margin: 2rem 0 1rem;
+}
+
+.container .content>div {
+    display: flex;
+}
+
+.container .content>div .products {
+    padding: 1.5rem 1rem 5rem 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.container .content>div .illustration {
+    height: 100%;
+    min-width: 250px;
+    flex: 1;
+    padding-top: 2rem;
+}
+
+.container .content>div .illustration img {
+    position: absolute;
+    z-index: -1;
+    right: 8rem;
+    bottom: 2.5rem;
+}
+
+.container::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: var(--brown-400);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: var(--brown-500);
+    border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: var(--yellowish);
+}
+
+@media screen and (max-width: 1400px) {
+    .container .content>div .products {
+        padding: 1.5rem 1rem 5rem 0;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .container .content>div .illustration {
+        min-width: 0px;
+    }
+
+    .container .content>div .illustration img {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .content {
+        padding: 0 3rem 0 3rem;
+    }
+
+    .container .content>div {
+        display: flex;
+    }
+
+    .container .content>div .illustration img {
+        right: 2rem;
+    }
+
+    .container .content>div .products {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container .content>div .illustration {
+        min-width: 0px;
+    }
+
+    .container .content>div .illustration img {
+        width: 30rem;
+        opacity: .25;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container .content {
+        padding: 0 1.25rem 0 1.25rem;
+    }
+
+    .container .content>div .products {
+        gap: 3rem;
+    }
+
+    .container .content>div .illustration img {
+        display: block;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%);
+        width: 70vw;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .container .content>div .illustration img {
+        height: 60%;
+        right: 1rem;
+    }
+}

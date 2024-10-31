@@ -1,0 +1,127 @@
+.container {
+    height: 100%;
+    display: flex !important;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.labels {
+    align-items: flex-start;
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: 1.5rem;
+}
+
+.labels th {
+    line-height: 2rem;
+    text-align: left;
+    font-weight: normal;
+}
+
+.labels th:first-child {
+    width: 242px;
+}
+
+.cartProducts {
+    flex: 1;
+    background-color: var(--background);
+    color: var(--brown-300);
+    overflow-y: auto;
+}
+
+.emptyCart {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.emptyCart img {
+    width: 80%;
+}
+
+.footer {
+    margin-top: 1rem;
+    text-align: center;
+    justify-self: flex-end;
+}
+
+.footer>table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer th {
+    line-height: 2rem;
+    text-align: left;
+    font-weight: normal;
+    padding: 0 1.5rem;
+}
+
+.footer th:first-child {
+    width: 242px;
+}
+
+.footer th:last-child {
+    text-align: end;
+}
+
+.cartListActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    gap: 1rem;
+}
+
+.cartListActions button {
+    line-height: 1rem;
+    height: 50px;
+    padding: 0 1rem;
+    margin: 1rem 0 1.5rem;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: var(--brown-500);
+    color: var(--brown-300);
+    transition: background 100ms;
+}
+
+.cartListActions button:last-child {
+    flex: 1;
+    background-color: var(--yellowish);
+    color: var(--brown-300);
+    padding: 0;
+}
+
+.cartListActions button:last-child>* {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cartListActions button:hover {
+    font-weight: bold;
+    background-color: var(--brown-300);
+    color: var(--yellowish);
+    outline: 2px solid var(--yellowish);
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-height: 650px) {
+    .container .cartProducts .emptyCart {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .container .cartProducts .emptyCart img {
+        width: 70%;
+    }
+}

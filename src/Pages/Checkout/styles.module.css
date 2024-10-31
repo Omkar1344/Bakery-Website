@@ -1,0 +1,140 @@
+.container {
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container img[alt="mountains"] {
+    position: absolute;
+    z-index: -1;
+    right: 8rem;
+    transform: rotate(8deg);
+}
+
+.container img[alt="komb"] {
+    position: absolute;
+    z-index: -1;
+    width: 75%;
+    max-width: 1400px;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%) scaleX(-1);
+}
+
+.container header {
+    display: flex;
+    gap: .5rem;
+}
+
+.container header:first-child> :first-child {
+    margin-top: .25rem;
+    color: var(--yellowish);
+}
+
+.container h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: normal;
+}
+
+.container p {
+    font-size: .875rem;
+}
+
+.container .checkoutHeader {
+    background-color: var(--brown-300);
+    display: block;
+    color: var(--background);
+}
+
+.container .checkoutHeader>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    max-width: 1600px;
+    padding: 1rem 8rem;
+    margin: 0 auto;
+}
+
+.container .checkoutHeader>div a {
+    display: flex;
+    align-items: center;
+}
+
+.container .checkoutHeader>div a:hover {
+    filter: brightness(1);
+}
+
+.container .checkoutHeader>div>div {
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container .checkoutHeader>div>div img {
+    width: 4.25rem;
+}
+
+.container .checkoutHeader>div>div h1 {
+    line-height: 2rem;
+}
+
+.container .checkoutHeader a {
+    display: flex;
+    gap: 1rem;
+    font-weight: normal;
+}
+
+.container .checkoutHeader .linkToHome {
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    transition: background-color 100ms;
+}
+
+.container .checkoutHeader .linkToHome svg {
+    color: var(--yellowish);
+}
+
+.container .checkoutHeader .linkToHome:hover {
+    background-color: var(--yellowish);
+    color: var(--brown-300);
+    font-weight: bold;
+}
+
+.container .checkoutHeader .linkToHome:hover svg {
+    color: inherit;
+}
+
+.container .formsContainer {
+    color: var(--background);
+    max-width: 1600px;
+    padding: 2rem 8rem 0;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.container .formsContainer .oderCard {
+    flex: 1;
+    background-color: var(--brown-300);
+    padding: 1rem 2rem 3rem;
+    margin-bottom: 1rem;
+    border-radius: .75rem;
+    min-width: 400px;
+}
+
+.container .formsContainer .oderCard header {
+    margin-bottom: .5rem;
+}
+
+.topStripe {
+    background-color: red;
+    position: fixed;
+    height: 3rem;
+    z-index: 1;
+}

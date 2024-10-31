@@ -1,0 +1,214 @@
+.menuContainer {
+    height: 100vh;
+    width: 7.5rem;
+    padding-top: 3rem;
+    background-color: var(--brown-300);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuContainer img {
+    width: 4.5rem;
+}
+
+.menuContainer nav {
+    flex: 1;
+    width: 100%;
+    color: var(--white);
+    margin-top: 2.25rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menuContainer nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.menuContainer nav ul li {
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.menuContainer nav ul li a:focus {
+    outline: none;
+    font-weight: 600;
+}
+
+.menuContainer>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-size: 0.625rem;
+}
+
+.menuContainer>a:hover svg {
+    animation: Boucer 0.5s;
+}
+
+.active {
+    font-weight: 600;
+    position: relative;
+    color: var(--brown-300);
+    background-color: var(--background);
+    width: 90%;
+    align-self: flex-end;
+    border-radius: 1rem 0 0 1rem;
+    transform: translateX(0.1rem);
+}
+
+.active::before {
+    position: absolute;
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    top: -1.5rem;
+    right: 0;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0.5rem 0.25rem 0 var(--background);
+}
+
+.active::after {
+    position: absolute;
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    bottom: -1.5rem;
+    right: 0;
+    border-top-right-radius: 1rem;
+    box-shadow: 0.5rem -0.25rem 0 var(--background);
+}
+
+@keyframes Boucer {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    33% {
+        transform: rotateZ(5deg) translateY(-0.12rem);
+    }
+
+    66% {
+        transform: rotateZ(-5deg) translateY(0);
+    }
+
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .menuContainer {
+        position: relative;
+        height: 8rem;
+        width: 100%;
+        padding: 1rem 1rem 0;
+        background-color: var(--brown-300);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .menuContainer::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 90%;
+        height: 0.6rem;
+        background-color: var(--background);
+        left: 0;
+        bottom: -0.6rem;
+        z-index: 4;
+    }
+
+    .menuContainer img {
+        margin-bottom: 0.5rem;
+    }
+
+    .menuContainer nav {
+        color: var(--white);
+        margin-top: 0;
+        align-self: flex-end;
+    }
+
+    .menuContainer nav ul {
+        flex-direction: row;
+    }
+
+    .menuContainer nav ul li {
+        position: relative;
+        width: 5.5rem;
+        height: 5rem;
+        z-index: 3;
+    }
+
+    .menuContainer>a {
+        display: none;
+    }
+
+    .active {
+        align-self: flex-end;
+        border-radius: 1rem 1rem 0 0;
+        transform: translateY(0.1rem) translateX(-0.1rem);
+    }
+
+    .active::before {
+        top: unset;
+        bottom: 0;
+        left: -1.5rem;
+        border-top-left-radius: 2rem;
+        box-shadow: 0.5rem 0.5rem 0 var(--background);
+    }
+
+    .active::after {
+        bottom: 0;
+        right: -1.5rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+        box-shadow: -0.5rem 0.5rem 0 var(--background);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .menuContainer {
+        height: 4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .menuContainer img {
+        margin: 0 0 1rem;
+        width: 2.75rem;
+    }
+
+    .menuContainer::after {
+        display: none;
+    }
+
+    .menuContainer nav {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .menuContainer>a {
+        display: none;
+    }
+}

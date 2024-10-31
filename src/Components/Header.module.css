@@ -1,0 +1,122 @@
+.container {
+    flex: 1;
+}
+
+.container .headerTop {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .headerTop h1 {
+    font-size: 2.5rem;
+}
+
+.container .headerTop div {
+    font-size: 0.875rem;
+    margin-right: 1rem;
+}
+
+.container .headerTop div span {
+    margin-right: 1rem;
+}
+
+.container .headerBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .headerBottom div {
+    font-size: 1rem;
+}
+
+.container .headerBottom div a {
+    font-weight: bold;
+}
+
+.container .headerBottom div a:hover {
+    text-decoration: underline;
+}
+
+.container .headerBottom .searchBox {
+    position: relative;
+}
+
+.container .headerBottom .searchBox input {
+    font-size: 0.875rem;
+    width: 18.25rem;
+    height: 3.125rem;
+    text-indent: 2.5rem;
+    background-color: var(--background);
+    border: 1px solid var(--gray-600);
+    border-radius: 0.625rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.35);
+}
+
+.container .headerBottom .searchBox>svg {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1020px) {
+    .container .headerTop {
+        flex: 1;
+        align-self: flex-start;
+    }
+
+    .container .headerTop div {
+        display: none;
+    }
+
+    .container .headerBottom {
+        width: 26.5rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .container .headerBottom .searchBox {
+        display: flex;
+        flex: 1;
+    }
+
+    .container .headerBottom .searchBox input {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container .headerTop {
+        flex: 1;
+        align-self: flex-start;
+    }
+
+    .container .headerTop h1 {
+        font-size: 2rem;
+    }
+
+    .container .headerTop div {
+        display: none;
+    }
+
+    .container .headerBottom {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .container .headerBottom p:first-of-type {
+        display: none;
+    }
+
+    .container .headerBottom .searchBox {
+        display: flex;
+        flex: 1;
+    }
+
+    .container .headerBottom .searchBox input {
+        flex: 1;
+    }
+}

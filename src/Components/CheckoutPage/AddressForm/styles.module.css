@@ -1,0 +1,98 @@
+.checkoutForm {
+    flex: 1;
+}
+
+.checkoutForm .topCard,
+.checkoutForm .bottomCard {
+    background-color: var(--brown-300);
+    color: var(--background);
+    margin-bottom: 1rem;
+    padding: 1.5rem 2.5rem 2.5rem;
+    border-radius: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkoutForm .topCard input,
+.checkoutForm .topCard select {
+    background-color: var(--background);
+    padding: .75rem;
+    border: 0;
+    border-radius: .25rem;
+}
+
+.checkoutForm .topCard select {
+    cursor: pointer;
+}
+
+.checkoutForm .topCard>div {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkoutForm .topCard>div:nth-child(4) input:last-child {
+    flex: 2;
+}
+
+.checkoutForm .topCard>div:nth-child(5) input:nth-of-type(1) {
+    max-width: 200px;
+}
+
+.checkoutForm .topCard>div:nth-child(5) input:nth-of-type(2) {
+    flex: 1;
+}
+
+.checkoutForm .topCard>div:nth-child(5) input:nth-of-type(3) {
+    max-width: 3.75rem;
+}
+
+.checkoutForm .topCard input::-webkit-outer-spin-button,
+.checkoutForm .topCard input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.checkoutForm .topCard input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.checkoutForm .checkboxContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkoutForm .checkboxContainer label {
+    cursor: pointer;
+    background-color: var(--yellowish);
+    color: var(--brown-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    flex: 1;
+    font-size: .75rem;
+    height: 3.125rem;
+    border: 2px solid transparent;
+    border-radius: .25rem;
+    font-weight: bold;
+}
+
+.checkoutForm .checkboxContainer label:hover {
+    outline: 2px solid var(--yellowish);
+    outline-offset: 2px;
+    filter: brightness(0.95);
+}
+
+.checkoutForm .checkboxContainer .checked {
+    font-weight: bold;
+    background-color: var(--brown-300);
+    color: var(--yellowish);
+    outline: 2px solid var(--yellowish);
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.checkoutForm .checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+}

@@ -1,0 +1,178 @@
+.card {
+    position: relative;
+    width: 15.625rem;
+    height: 25rem;
+    border-radius: 0 0 8px 30px;
+    text-align: center;
+    animation: apear 500ms;
+
+    @keyframes apear {
+        0% {
+            transform: translateY(-1rem);
+        }
+
+        100% {
+            transform: translateY(0rem);
+        }
+    }
+}
+
+.card img {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 3rem 4rem 2rem 4rem;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--brown-300);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: width 150ms, height 150ms;
+}
+
+.card:hover img {
+    width: 210px;
+    height: 210px;
+}
+
+.card:hover .cardBackground .cart {
+    background-color: var(--yellowish);
+    color: var(--brown-300);
+}
+
+.card:hover .cardBackground .cardFooter {
+    background-color: var(--yellowish);
+    color: var(--brown-300);
+}
+
+.cardBackground {
+    position: absolute;
+    bottom: 0;
+    height: 20.9375rem;
+    z-index: 0;
+    background-color: var(--brown-400);
+    border-radius: 8px 30px 8px 30px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.65);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cardBackground h3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.cardBackground>div {
+    width: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.cardBackground>div>span {
+    font-size: 1.125rem;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cardBackground .cart {
+    cursor: pointer;
+    height: 100%;
+    padding: .125rem .75rem;
+    background-color: var(--brown-500);
+    color: var(--brown-300);
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    transition: background 150ms;
+}
+
+.cardBackground .cart svg {
+    transform: translateY(-.1rem);
+}
+
+.cardBackground .cart:hover {
+    background-color: var(--brown-300);
+    border: 1px solid var(--brown-500);
+    color: var(--yellowish);
+}
+
+.cardBackground p {
+    text-align: justify;
+    font-size: .75rem;
+    line-height: 1.15rem;
+    padding: .5rem 1.25rem;
+    height: 5rem;
+    margin-bottom: .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.cardBackground .cardFooter {
+    background-color: var(--brown-300);
+    width: 100%;
+    border-radius: 0 0 8px 30px;
+    display: flex;
+    justify-content: center;
+    font-size: .75rem;
+    line-height: .75rem;
+    padding: .625rem 0;
+    transition: background 150ms;
+}
+
+@media screen and (max-width: 540px) {
+    .card {
+        width: 17.625rem;
+        height: 27.25rem;
+    }
+
+    .card img {
+        width: 13.75rem;
+        height: 13.75rem;
+    }
+
+    .card:hover img {
+        width: 14.25rem;
+        height: 14.25rem;
+    }
+
+    .cardBackground h3 {
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+        padding: 0 1rem;
+    }
+
+    .cardBackground>div {
+        justify-content: space-around;
+    }
+
+    .cardBackground>div>span {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .cardBackground .cart {
+        margin: .25rem 0;
+    }
+
+    .cardBackground .cart svg {
+        transform: translateY(-.1rem);
+    }
+}
