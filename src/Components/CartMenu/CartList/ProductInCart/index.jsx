@@ -49,7 +49,7 @@ function ProductInCart({ productId, quantity, totalPrice, unityPrice }) {
                 {unityPrice.toLocaleString('pt-BR', {
                   minimumFractionDigits: 2,
                   style: 'currency',
-                  currency: 'BRL'
+                  currency: 'INR'
                 })}
               </span>
             </div>
@@ -67,7 +67,7 @@ function ProductInCart({ productId, quantity, totalPrice, unityPrice }) {
             {totalPrice.toLocaleString('pt-BR', {
               minimumFractionDigits: 2,
               style: 'currency',
-              currency: 'BRL'
+              currency: 'INR'
             })}
           </span>
         </div>

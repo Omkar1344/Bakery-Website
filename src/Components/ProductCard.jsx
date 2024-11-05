@@ -43,7 +43,7 @@ export default function ProductCard({ product }) {
             {product.price.toLocaleString('en-US', {
               minimumFractionDigits: 2,
               style: 'currency',
-              currency: 'USD' // Adjusted to USD for English localization
+              currency: 'INR' // Adjusted to USD for English localization
             })}
           </span>
           <button className={styles.cart} onClick={handleAddToCart}>
